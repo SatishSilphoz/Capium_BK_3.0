@@ -57,9 +57,9 @@ function toggleAllBoxes() {
 <tr>
 <td>Tests passed/Failed/Skipped:</td><td>1/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Fri Feb 07 11:58:13 IST 2025</td>
+<td>Started on:</td><td>Tue Mar 11 18:45:16 IST 2025</td>
 </tr>
-<tr><td>Total time:</td><td>64 seconds (64417 ms)</td>
+<tr><td>Total time:</td><td>19 seconds (19346 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -77,39 +77,71 @@ function toggleAllBoxes() {
 </tr>
 <tr>
 <td title='com.Capium.TestRunFiles.CucumberRunnerTests.runScenario()'><b>runScenario</b><br>Test class: com.Capium.TestRunFiles.CucumberRunnerTests<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Accounts Production Dashboard", "Login into Capium"<br/>
-<a href="#Output-1108651663" onClick='toggleBox("Output-1108651663", this, "Show output", "Hide output");'>Show output</a>
+<a href="#Output-1294361489" onClick='toggleBox("Output-1294361489", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-1108651663" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-1108651663">
+<a href="#Output-1294361489" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1294361489">
 Chrome Browser launched Sucessfully<br/>
 </div>
 </td>
-<td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of [[ChromeDriver: chrome on windows (ffc2d520a634664f990dbcc184df4550)] -&gt; id: CboType] (tried for 12 second(s) with 500 milliseconds interval)
+<td><div><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;(//img[@alt=&apos;logo&apos;])[2]&quot;}
+  (Session info: chrome=133.0.6943.142)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
 Build info: version: &apos;4.23.0&apos;, revision: &apos;4df0a231af&apos;
-System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;23.0.1&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.5&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 132.0.6834.110, chrome: {chromedriverVersion: 132.0.6834.159 (2d77d3fc445..., userDataDir: C:\Users\user\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56065}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:56065/devtoo..., se:cdpVersion: 132.0.6834.110, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: ffc2d520a634664f990dbcc184df4550
-	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
-	at com.Capium.Utilies.HelperClass.selectFromDropdownAndObserveResults(HelperClass.java:121)
-	at com.Capium.stepDefinations.CapiumLoginDef_file.validate_client_type(CapiumLoginDef_file.java:122)
-	at ✽.Validate Client Type(file:///C:/Users/user/Downloads/Capium/Capium/src/test/resources/Features/CapiumLogin.feature:28)
-</pre></div><a href='#' onClick='toggleBox("stack-trace1108651663", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1108651663'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of [[ChromeDriver: chrome on windows (ffc2d520a634664f990dbcc184df4550)] -&gt; id: CboType] (tried for 12 second(s) with 500 milliseconds interval)
+Command: [a0aeaa67a820031d6be7d7fa4daf632d, findElement {value=(//img[@alt=&apos;logo&apos;])[2], using=xpath}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 133.0.6943.142, chrome: {chromedriverVersion: 133.0.6943.141 (2a5d6da0d61..., userDataDir: C:\Users\user\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:58108}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:58108/devtoo..., se:cdpVersion: 133.0.6943.142, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: a0aeaa67a820031d6be7d7fa4daf632d
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:527)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:357)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:351)
+	at com.Capium.Utilies.HelperClass.verify(HelperClass.java:175)
+	at com.Capium.Actions.CapiumLoginActions.verifyHomecIcon(CapiumLoginActions.java:201)
+	at com.Capium.stepDefinations.CapiumLoginDef_file.validate_c_i_e_capium_icon_in_home_page(CapiumLoginDef_file.java:46)
+	at ✽.Validate C i.e Capium icon in Home Page(file:///D:/Auto/CapiumApplication/Bookkeeping_3.0/Capium_3.0/src/test/resources/Features/CapiumLogin.feature:14)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1294361489", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1294361489'><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;(//img[@alt=&apos;logo&apos;])[2]&quot;}
+  (Session info: chrome=133.0.6943.142)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
 Build info: version: &apos;4.23.0&apos;, revision: &apos;4df0a231af&apos;
-System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;23.0.1&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.5&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 132.0.6834.110, chrome: {chromedriverVersion: 132.0.6834.159 (2d77d3fc445..., userDataDir: C:\Users\user\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56065}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:56065/devtoo..., se:cdpVersion: 132.0.6834.110, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: ffc2d520a634664f990dbcc184df4550
-	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
-	at com.Capium.Utilies.HelperClass.selectFromDropdownAndObserveResults(HelperClass.java:121)
-	at com.Capium.stepDefinations.CapiumLoginDef_file.validate_client_type(CapiumLoginDef_file.java:122)
-	at ✽.Validate Client Type(file:///C:/Users/user/Downloads/Capium/Capium/src/test/resources/Features/CapiumLogin.feature:28)
+Command: [a0aeaa67a820031d6be7d7fa4daf632d, findElement {value=(//img[@alt=&apos;logo&apos;])[2], using=xpath}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 133.0.6943.142, chrome: {chromedriverVersion: 133.0.6943.141 (2a5d6da0d61..., userDataDir: C:\Users\user\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:58108}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:58108/devtoo..., se:cdpVersion: 133.0.6943.142, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: a0aeaa67a820031d6be7d7fa4daf632d
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:527)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:357)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:351)
+	at com.Capium.Utilies.HelperClass.verify(HelperClass.java:175)
+	at com.Capium.Actions.CapiumLoginActions.verifyHomecIcon(CapiumLoginActions.java:201)
+	at com.Capium.stepDefinations.CapiumLoginDef_file.validate_c_i_e_capium_icon_in_home_page(CapiumLoginDef_file.java:46)
+	at ✽.Validate C i.e Capium icon in Home Page(file:///D:/Auto/CapiumApplication/Bookkeeping_3.0/Capium_3.0/src/test/resources/Features/CapiumLogin.feature:14)
 </pre></div></td>
-<td>56</td>
-<td>com.Capium.TestRunFiles.CucumberRunnerTests@3c947bc5</td></tr>
+<td>13</td>
+<td>com.Capium.TestRunFiles.CucumberRunnerTests@6aaceffd</td></tr>
 </table><p>
 <table width='100%' border='1' class='invocation-passed'>
 <tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
@@ -121,16 +153,16 @@ Session ID: ffc2d520a634664f990dbcc184df4550
 </tr>
 <tr>
 <td title='com.Capium.TestRunFiles.CucumberRunnerTests.runScenario()'><b>runScenario</b><br>Test class: com.Capium.TestRunFiles.CucumberRunnerTests<br>Test method: Runs Cucumber Scenarios<br>Parameters: "User login", "Login into Capium"<br/>
-<a href="#Output-485542604" onClick='toggleBox("Output-485542604", this, "Show output", "Hide output");'>Show output</a>
+<a href="#Output-240000757" onClick='toggleBox("Output-240000757", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-485542604" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-485542604">
+<a href="#Output-240000757" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-240000757">
 Chrome Browser launched Sucessfully<br/>
 </div>
 </td>
 <td></td>
-<td>4</td>
-<td>com.Capium.TestRunFiles.CucumberRunnerTests@3c947bc5</td></tr>
+<td>3</td>
+<td>com.Capium.TestRunFiles.CucumberRunnerTests@6aaceffd</td></tr>
 </table><p>
 </body>
 </html>
