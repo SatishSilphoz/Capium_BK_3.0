@@ -35,14 +35,20 @@ public class HelperClass {
              driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(TIMEOUT));
          }    
               
-    public static void openPage(String url) {
-        driver.get(url);
-    }
+     public static void openPage(String url) {
+         if (driver == null) {
+             setUpDriver();  // Ensure WebDriver is initialized
+         }
+         driver.get(url);
+     }
   
       
-    public static WebDriver getDriver() {
-        return driver;              
-    }
+     public static WebDriver getDriver() {
+         if (driver == null) {
+             setUpDriver();
+         }
+         return driver;
+     }
       
     public static void setUpDriver() {
           
@@ -55,6 +61,7 @@ public class HelperClass {
      public static void tearDown() {
            
          if(driver!=null) {
+        	 setUpDriver(); 
              driver.close();
              driver.quit();
          }
@@ -89,7 +96,32 @@ public class HelperClass {
             element.clear();  
             element.sendKeys(text);  
         }
+        
+        public static List<WebElement> Listoptions(By locator) {
+            WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(TIMEOUT));
+            wait.until(ExpectedConditions.visibilityOfElementLocated(locator)); 
+            return driver.findElements(locator);
+        }
 
+        public static void ClickandAnyTypeofWebelemnt(By locator) {
+       	 WebDriverWait wait =HelperClass.getWait();
+       	WebElement element = driver.findElement(locator);
+       	 wait.until(ExpectedConditions.visibilityOf(element));
+           element.click(); 
+            
+       }
+
+        public static boolean isButtonEnabled(By locator) {
+       	 WebDriverWait wait =HelperClass.getWait();
+           try {
+               WebElement button = driver.findElement(locator);
+               wait.until(ExpectedConditions.visibilityOf(button));
+               return button.isEnabled();
+           } catch (Exception e) {
+               System.out.println("Error occurred while checking button: " + e.getMessage());
+               return false;  
+           }
+       }
         public static void sendKeysAndPressEnter(By locator, String text) {
             WebElement element = driver.findElement(locator);
             element.clear();  
@@ -109,8 +141,8 @@ public class HelperClass {
             select.selectByValue(value);
         }
 
-        public static void ClickDropdown(By dropdownLocator) {
-       	 WebElement dropdown = driver.findElement(dropdownLocator);
+        public static void ClickDropdown(By  dplocator) {
+       	 WebElement dropdown = driver.findElement(dplocator);
             Select select = new Select(dropdown);
         }
         
@@ -206,19 +238,41 @@ public class HelperClass {
         
        
 }
+        public static void SearchAndSelectClient(By searchFieldLocator, String searchText, By suggestionLocator) {
+          
+            WebElement searchField = wait.until(ExpectedConditions.visibilityOfElementLocated(searchFieldLocator));
+            searchField.clear(); 
+            searchField.sendKeys(searchText);
+            wait.until(ExpectedConditions.visibilityOfElementLocated(suggestionLocator));
+            WebElement firstSuggestion = driver.findElement(suggestionLocator);
+            firstSuggestion.click();
+        }
         public static void refresh() {
         	driver.navigate().refresh();
         	
 }
-        public static boolean isButtonEnabled(By locator) {
-       	 WebDriverWait wait =HelperClass.getWait();
-           try {
-               WebElement button = driver.findElement(locator);
-               wait.until(ExpectedConditions.visibilityOf(button));
-               return button.isEnabled();
-           } catch (Exception e) {
-               System.out.println("Error occurred while checking button: " + e.getMessage());
-               return false;  
-           }
-       }
+        
+        public static void SelectDropdownvaluesOneByOne(By Drodownloactor) {
+        
+        	WebElement dropdownlocator = driver.findElement(Drodownloactor);  
+            Select dropdown = new Select(dropdownlocator);
+            List<WebElement> options = dropdown.getOptions();
+            for (WebElement option : options) {
+                dropdown.selectByVisibleText(option.getText());
+                System.out.println("Selected: " + option.getText());
+                try {
+                    Thread.sleep(1000);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+}
+            }
+        }
+         public static void Searchclient(String Clientname, By Locator1) throws InterruptedException {       
+    
+                WebElement searchBox = driver.findElement(By.id("txtSearch"));
+                searchBox.sendKeys(Clientname);
+                JavascriptExecutor js = (JavascriptExecutor) driver;
+                WebElement firstSuggestion = driver.findElement(Locator1);
+                js.executeScript("arguments[0].click();", firstSuggestion);
+}
 }
