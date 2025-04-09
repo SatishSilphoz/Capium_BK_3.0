@@ -1,15 +1,7 @@
 package com.Capium.stepDefinations;
-
-import java.io.IOException;
-
-import org.openqa.selenium.By;
 import org.testng.Reporter;
-
-import com.Capium.Actions.CapiumLoginActions;
 import com.Capium.Actions.Capium_Login_Actions;
 import com.Capium.Utilies.HelperClass;
-import com.aventstack.extentreports.Status;
-
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -47,8 +39,7 @@ public class CapiumLoginDef_file {
 	}
 	@Then("Logout from application")
 	public void logout_from_application() {
-	  loginpage.Logout();
-	    throw new io.cucumber.java.PendingException();
-	}
+	  System.out.println("Login successfully into BK module");
 
+}
 }

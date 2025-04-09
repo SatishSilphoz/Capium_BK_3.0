@@ -1,14 +1,5 @@
 package com.Capium.Actions;
-
-import java.time.Duration;
-
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
-
 import com.Capium.Locators.Capium_Login_Locators;
 import com.Capium.Utilies.HelperClass;
 
@@ -89,27 +80,4 @@ public void Navigate_to_bookkeeping_module() {
  
     }
     
-  
-	
- 
-	   public void Logout() {
-		  
-		   try {
-			    if (loginLocators.Logout_element != null && loginLocators.Logout_element.isDisplayed()) {
-			        loginLocators.Logout_element.click();
-			        return;
-			    }
- 
-			    if (loginLocators.Logo_in_homepage != null && loginLocators.Logo_in_homepage.isDisplayed()) {
-			        loginLocators.Logo_in_homepage.click();
-			        if (loginLocators.Logout_inside_logo != null && loginLocators.Logout_inside_logo.isDisplayed()) {
-			            loginLocators.Logout_inside_logo.click();
-			        }
-			    }
- 
-			} catch (Exception e) {
-			    System.out.println("Logout failed: " + e.getMessage());
-			}
- 
 	   }
-}

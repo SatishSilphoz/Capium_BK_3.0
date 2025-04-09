@@ -15,6 +15,14 @@ public class Capium_Bookkeeping_Bank_Locators {
 	@CacheLookup
 	public WebElement Dashboard ;
 	
+	@FindBy(xpath="//h1[text()='Bank Dashboard']")
+	@CacheLookup
+	public WebElement BankDashboard ;
+	
+	@FindBy(xpath="//button[@id='btnAddNew']")
+	@CacheLookup
+	public WebElement AddBank ;
+	
 	@FindBy(xpath="//input[@id='txtBankName']")
 	@CacheLookup
 	public WebElement BankName ;
@@ -31,13 +39,26 @@ public class Capium_Bookkeeping_Bank_Locators {
 	@CacheLookup
 	public WebElement SaveBank;
 	
-	@FindBy(xpath="(//a[@class='azure'])[1]")
+	@FindBy(xpath="//td[@class='text-left']/a")
 	@CacheLookup
 	public WebElement CreatedBank;
+	
+	@FindBy(xpath="//a[text()='Continue']")
+	@CacheLookup
+	public WebElement Continue;
+	
+	@FindBy(xpath="//a[@id='btncancel']/i")
+	@CacheLookup
+	public WebElement Backbutton;
 	
 	@FindBy(xpath="(//a[@type='button'])[2]")
 	@CacheLookup
 	public WebElement Manualimport;
+	
+	@FindBy(xpath="//a[@id='A1']")
+	@CacheLookup
+	public WebElement Downloadtemplate;
+	
 	
 	@FindBy(xpath="(//input[@type='text'])[2]")
 	@CacheLookup
@@ -71,6 +92,18 @@ public class Capium_Bookkeeping_Bank_Locators {
 	@CacheLookup
 	public WebElement Bankimport;
 	
+	@FindBy(xpath="//span[text()='Choose file']")
+	@CacheLookup
+	public WebElement UploadBankimport;
+	
+	@FindBy(xpath="//a[@class='btn btn-azure']/i")
+	@CacheLookup
+	public WebElement Clickimport;
+	
+	@FindBy(xpath="//button[text()='Ok']")
+	@CacheLookup
+	public WebElement alertok;
+	
 	@FindBy(xpath="")
 	@CacheLookup
 	public WebElement DownloadBankimport;
@@ -85,11 +118,31 @@ public class Capium_Bookkeeping_Bank_Locators {
 	
 	@FindBy(xpath="(//input[@type='text'])[8]")
 	@CacheLookup
-	public WebElement Account;
+	public WebElement QuickentryAccount1;
+	
+	@FindBy(xpath="(//textarea[@class='input-sm form-control'])[1]")
+	@CacheLookup
+	public WebElement QuickentryDes1;
+	
+	@FindBy(xpath="(//input[@type='text'])[16]")
+	@CacheLookup
+	public WebElement QuickentryAccount2;
+	
+	@FindBy(xpath="(//textarea[@class='input-sm form-control'])[2]")
+	@CacheLookup
+	public WebElement QuickentryDes2;
 	
 	@FindBy(xpath="(//input[@type='text'])[9]")
 	@CacheLookup
-	public WebElement InvoiceDate;
+	public WebElement InvoiceDate1;
+	
+	@FindBy(xpath="(//input[@type='text'])[17]")
+	@CacheLookup
+	public WebElement InvoiceDate2;
+	
+	@FindBy(xpath="(//div[@class='clearfix'])[5]")
+	@CacheLookup
+	public WebElement outsideclick;
 	
 	@FindBy(xpath="//i[@class='fa fa-save']")
 	@CacheLookup
@@ -203,7 +256,9 @@ public class Capium_Bookkeeping_Bank_Locators {
 	@CacheLookup
 	public WebElement SaveADDBankTransfer;
 	
-	
+	@FindBy(xpath="//td[@class='col-action']/textarea")
+	@CacheLookup
+	public WebElement Journaldescription;
 	
 	
 	
