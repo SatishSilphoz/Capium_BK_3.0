@@ -106,5 +106,6 @@ public void validatedirectpayment() {
 	HelperClass.selectOptionByValue(By.xpath("(//select[@class='ddlaactioncss input-xs'])[1]"), "post");
 	HelperClass.SearchAndSelectClient(By.xpath("(//input[@type='text'])[9]"), "sales", By.xpath("//li[@title='Turnover']/a"));
 	bankLocators.Journaldescription.sendKeys("des1");
+	
 }
 }

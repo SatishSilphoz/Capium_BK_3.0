@@ -260,7 +260,9 @@ public class Capium_Bookkeeping_Bank_Locators {
 	@CacheLookup
 	public WebElement Journaldescription;
 	
-	
+	@FindBy(xpath="(//button[@type='button']/i)[3]")
+	@CacheLookup
+	public WebElement Directjournalsave;
 	
 	
 	

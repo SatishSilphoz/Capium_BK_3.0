@@ -51,27 +51,29 @@ public class Capium_BK_Bank_Functionality {
 
 	@Then("Validate Manual import functionality")
 	public void validate_manual_import_functionality() throws InterruptedException, AWTException {
-		bankactions.validatebankimportfunctionality();
+		bankactions.manualimportfunctionality();
 	   
 	}
 
 	@Then("Validate bank import funtionality")
-	public void validate_bank_import_funtionality() {
+	public void validate_bank_import_funtionality() throws InterruptedException, AWTException {
+		bankactions.validatebankimportfunctionality();
 	   
 	}
 
 	@Then("Validate Quick entry functionality")
-	public void validate_quick_entry_functionality() {
-	   
+	public void validate_quick_entry_functionality() throws InterruptedException {
+	   bankactions.validatequickentryadding();
 	}
 
 	@Then("Validate Quick journal functionality")
-	public void validate_quick_journal_functionality() {
-	   
+	public void validate_quick_journal_functionality() throws InterruptedException {
+	   bankactions.validatequickentryadding();
 	}
 
 	@Then("Validate Direct receipt functionality")
 	public void validate_direct_receipt_functionality() {
+		
 	 
 	}
 
@@ -109,10 +111,4 @@ public class Capium_BK_Bank_Functionality {
 	public void validate_bank_transfer_functionality() {
 	  
 	}
-
-
-
-	
-	
-
 }
